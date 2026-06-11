@@ -1,0 +1,8 @@
+project: phosphor-host-ipmid
+target: fuzz_payload_unpack
+testsuite:
+  - file:///mayhem/mayhem/testsuite/fuzz_payload_unpack
+cmds:
+  - cmd: /mayhem/fuzz_payload_unpack
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_payload_unpack.dict
