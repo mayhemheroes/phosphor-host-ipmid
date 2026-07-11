@@ -1,0 +1,9 @@
+project: phosphor-host-ipmid
+target: fuzz_sensor_utils
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sensor_utils/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sensor_utils
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_sensor_utils.dict

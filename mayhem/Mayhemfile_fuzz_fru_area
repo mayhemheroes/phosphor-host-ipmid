@@ -1,0 +1,9 @@
+project: phosphor-host-ipmid
+target: fuzz_fru_area
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fru_area/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fru_area
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_fru_area.dict
